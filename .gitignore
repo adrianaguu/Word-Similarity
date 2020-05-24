@@ -1,6 +1,7 @@
 2gm*
 env/
-index
+search/index
+search/booleanRetrieval/index
 
 ### Django ###
 *.log
