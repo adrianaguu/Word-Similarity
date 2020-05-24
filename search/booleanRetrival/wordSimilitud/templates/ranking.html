@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <title>Word Similarity</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'ranking.css' %}">
+    </head>
+    <body>
+      <div class="page-header">
+        <h1><a href="/">Word Similarity</a></h1>
+    </div>
+
+    <div class="content container">
+      <div class="row">
+          <div class="col-md-8">
+
+            <form method="POST" action="" class="post-form">{% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="save btn btn-default">Search</button>
+          </form>
+          <br>
+
+          {% if found%}
+          <h2>Word not indexed</h2>
+          {% endif%}
+          
+          {% if word%}
+          <h2>Word's lemma: {{word}}</h2>
+          <h3>comparison execution time: {{time}}</h3>
+          <h3>Similar words:</h3>
+          <ol class="a">
+          {% for w in words %}
+          <li><b>{{ w.1 }}</b>, with a value of: {{ w.0 }}</li>
+          {% endfor %}
+          
+          {% endif%}
+
+          </ul>
+         
+          </div>
+      </div>
+  </div>
+        
+    </body>
+</html>
