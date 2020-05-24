@@ -1,5 +1,6 @@
 2gm*
 env/
+index
 
 ### Django ###
 *.log
