@@ -1,7 +1,10 @@
 2gm*
 env/
+factorized/
+lemas/
 search/index
 search/booleanRetrieval/index
+
 
 ### Django ###
 *.log
