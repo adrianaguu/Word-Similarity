@@ -13,7 +13,7 @@ en-core-web-sm==2.2.5
 filelock==3.0.12
 idna==2.9
 isort==4.3.21
-joblib==0.14.1
+joblib==1.2.0
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
 murmurhash==1.0.2
